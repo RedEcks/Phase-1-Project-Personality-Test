@@ -290,7 +290,7 @@ function characterFetch(yourCharacter){
         .then(data => { 
         console.log(data)
         const html=data.results.map(user => {
-            return ` You are: ${user.name}`
+            return ` You are: ${user.name} <button onclick = "location.reload()"> Try again? </button>`
         })
         console.log('html',html)
         postedAnswers.innerHTML= document.querySelector('#app').innerHTML=html
